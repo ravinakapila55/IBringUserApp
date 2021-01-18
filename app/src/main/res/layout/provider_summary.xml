@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorBlue">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="8dp"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/back_icon"
+            android:visibility="visible" />
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="Summary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="409dp"
+        android:layout_height="662dp"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="2dp">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="15dp"
+            android:layout_marginBottom="15dp">
+
+
+            <ImageView
+                android:id="@+id/ivProvider"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_gravity="center"
+                android:src="@drawable/plumber"/>
+
+            <com.iBring_user.app.Utils.ClanProTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jack Smith"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ivProvider"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <com.iBring_user.app.Utils.ClanProTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Barnett Street Sisters Beach"
+                android:textColor="@color/light_gray"
+                app:layout_constraintLeft_toRightOf="@+id/ivProvider"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                android:layout_marginLeft="10dp"/>
+
+
+            <com.iBring_user.app.Utils.ClanProTextView
+                android:id="@+id/tvsunmary"
+                android:layout_width="300dp"
+                android:layout_height="379dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:text="@string/dummy_text"
+                android:textColor="@color/chat_text"
+                android:textSize="12sp"
+                android:gravity="start"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProvider"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@color/grayy"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvsunmary"
+                android:layout_marginTop="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDateLabel"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    />
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 Feb 2020"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvDateLabel"
+                    android:textColor="@color/black"
+                    />
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:00 PM"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDate"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvDateLabel"
+                    android:textColor="@color/black"
+                    />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvpriceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price:"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    />
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                        android:id="@+id/tvLocationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location:"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvpriceLabel"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$20"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        app:layout_constraintLeft_toRightOf="@+id/tvpriceLabel"
+                        android:textColor="@color/black"
+                        />
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                        android:id="@+id/tvLoaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Lorem Ipsum"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toRightOf="@+id/tvLocationLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPrice"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPay"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccInfo"
+                android:layout_marginTop="40dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                android:background="@drawable/yellow_background"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="PAY"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

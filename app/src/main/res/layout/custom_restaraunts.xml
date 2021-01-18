@@ -1,0 +1,97 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvCar"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:elevation="8dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearr"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:orientation="horizontal">
+
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/iv_restraunt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:siSquare="true"
+            app:siRadius="3dp"
+            app:siBorderWidth="3dp"
+            app:siBorderColor="@color/grayy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/a"/>
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            android:gravity="start"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:text="Lorem Ipsum dolor sit amet,consec \ntetur adipiscing elit."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_restraunt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_restraunt"
+            android:src="@drawable/location_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:tint="@color/yellow"/>
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="9319 Mill Road NG68 310"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="3dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ivLocation"
+            android:textColor="@color/dark_gray"/>
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@+id/tvLocation"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="@color/yellow"
+            android:rating="5"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

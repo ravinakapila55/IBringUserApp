@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/white_background"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="@dimen/_30sdp"
+        >
+
+
+
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:padding="8dp"
+            android:text="What are you looking for"
+            android:layout_marginTop="10dp"
+           />
+
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/cancel_req_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rlEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            android:background="@drawable/gray_fill_background"
+            android:layout_marginRight="20dp">
+
+
+
+
+            <EditText
+                android:id="@+id/etText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:hint="Enter here"
+                android:layout_alignParentStart="true"
+                android:textColorHint="@color/dark_gray"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/dark_gray"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="10dp"/>
+
+
+
+        </RelativeLayout>
+
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlEnter"
+            android:gravity="center"
+            android:background="@drawable/yellow_background"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="SUBMIT"
+            android:layout_marginTop="30dp"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

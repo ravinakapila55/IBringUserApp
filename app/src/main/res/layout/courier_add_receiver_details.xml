@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/header">
+
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            android:src="@drawable/new_logo_yellow"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/header">
+
+
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/back_arrow"
+            android:tint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tvHeaderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Create Parcel"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_485sdp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_60sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccDots"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                    android:id="@+id/ivDot1"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/circle_black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <View
+                    android:id="@+id/vDot1"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="1dp"
+                    android:background="@color/line_dark"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivDot1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                    <ImageView
+                    android:id="@+id/ivDot2"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/circle_black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <View
+                    android:id="@+id/vDot2"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="1dp"
+                    android:background="@color/line_dark"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivDot2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/ivDot3"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/circle_black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccDots"
+                android:text="Receiver Details"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"/>
+
+            <View
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="1dp"
+                android:background="@color/yellow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabel"/>
+
+            <RelativeLayout
+                android:id="@+id/rlName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+                    <ImageView
+                    android:id="@+id/ivName"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user"/>
+
+                <com.iBring_user.app.Utils.ClanProEditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Full Name"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:textColorHint="@color/chat_text"
+                    android:layout_toRightOf="@+id/ivName"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:imeOptions="actionNext"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_bg_trans_color"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlName"
+                android:layout_marginTop="15dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivEmail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/email"/>
+
+                <com.iBring_user.app.Utils.ClanProEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Email Address"
+                    android:textColorHint="@color/chat_text"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivEmail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/text_bg_trans_color"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlContact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlEmail"
+                android:layout_marginTop="15dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivcontact"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/contact"/>
+
+                <com.iBring_user.app.Utils.ClanProEditText
+                    android:id="@+id/mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Contact Number"
+                    android:textColorHint="@color/text_bg_trans_color"
+                    android:digits="0123456789"
+                    android:layout_toRightOf="@+id/ivcontact"
+                    android:inputType="number"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/chat_text"
+                    android:imeOptions="actionNext"
+                    android:maxLength="15"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlContact"
+                android:layout_marginTop="15dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/location_icon"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Current Location"
+                    android:layout_toRightOf="@+id/ivAddress"
+                    android:inputType="text"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_bg_trans_color"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSpecialNotes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlAddress"
+                android:layout_marginTop="15dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                    <ImageView
+                    android:id="@+id/ivNote"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pencill"/>
+
+                <com.iBring_user.app.Utils.ClanProEditText
+                android:id="@+id/tvNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:hint="Special Notes"
+                android:textColorHint="@color/text_bg_trans_color"
+                android:layout_toRightOf="@+id/ivNote"
+                android:inputType="text"
+                android:layout_centerVertical="true"
+                android:textColor="@color/chat_text"
+                android:imeOptions="actionNext"
+                android:maxLength="15"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEstimatedPrice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlSpecialNotes"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                        android:id="@+id/tvEstimatedPriceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated Price:"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+
+                    <com.iBring_user.app.Utils.ClanProTextView
+                        android:id="@+id/tvEstimatedPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 120"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPayments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlEstimatedPrice"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible"
+                android:layout_marginRight="10dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvPaymentMethodLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Method:"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"/>
+
+
+                <com.iBring_user.app.Utils.ClanProTextView
+                    android:id="@+id/tvPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:drawableRight="@drawable/drop_down_gray"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_12sdp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+            android:id="@+id/rlSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlPayments"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:background="@drawable/yellow_background"
+            android:layout_marginRight="10dp">
+
+
+                    <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Submit"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

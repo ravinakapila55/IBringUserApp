@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    compileSdkVersion 29
+
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.iBring_user.app"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    //priyank.referrals@gmail.com
+
+    android {
+        compileOptions {
+            targetCompatibility = "8"
+            sourceCompatibility = "8"
+        }
+    }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+}
+
+dependencies
+ {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+//    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.citux:datetimepicker:0.2.0'
+    implementation 'com.android.support:cardview-v7:25.3.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+    implementation 'com.intuit.ssp:ssp-android:1.0.4'
+    implementation 'com.koushikdutta.ion:ion:2.+'
+
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'com.braintreepayments:card-form:3.0.3'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+//    implementation 'com.splunk:mint-android-sdk:5.1.0'
+    implementation 'com.stripe:stripe-android:2.0.2'
+
+/*    implementation 'com.google.android.gms:play-services:11.0.4'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    implementation 'com.google.android.gms:play-services-auth:11.0.4'
+    implementation 'com.google.android.gms:play-services-gcm:11.0.4'*/
+
+
+    implementation 'com.google.android.gms:play-services:12.0.1'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'com.vicmikhailau:MaskedEditText:3.0.4'
+
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+
+
+
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.afollestad:viewpagerdots:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+
+    /* for direction */
+    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+
+
+     implementation 'com.squareup.picasso:picasso:2.5.2'
+     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+
+    /*Retrofit*/
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    testCompile 'junit:junit:4.12'
+
+    implementation('io.socket:socket.io-client:1.0.0')
+            {
+                // excluding org.json which is provided by Android
+                exclude group: 'org.json', module: 'json'
+            }
+
+
+
+    /*Paypal*/
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.14.2'
+
+//    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+//    implementation 'com.facebook.android:facebook-android-sdk:4.26.0'
+
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+//    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+
+
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+}
+
+

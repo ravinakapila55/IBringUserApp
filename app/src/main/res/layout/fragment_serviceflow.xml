@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/ivMarker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/marker_red"/>
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:text="Sectoer 126,Model Town,Kharar"
+            app:layout_constraintLeft_toRightOf="@+id/ivMarker"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivprofile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/gray_fill_background"
+        app:layout_constraintTop_toBottomOf="@+id/ccTop"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="25dp"
+            android:src="@android:drawable/ic_menu_search"/>
+
+        <com.iBring_user.app.Utils.ClanProEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/light_gray"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Search for restaurants,cuisines"
+            app:layout_constraintLeft_toRightOf="@+id/ivSearch"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CC_Type"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccSearch"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/chat_bg_gray"
+        >
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvDelivery"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Delivery"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@color/white"
+            android:padding="5dp"/>
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvSelf"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Self Pickup"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="5dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_filterTypes"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CC_Type"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/chat_bg_gray"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccRestraunts"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cc_filterTypes"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/chat_bg_gray"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRestraunt"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "840731699039",
+    "firebase_url": "https://ibringuserapp.firebaseio.com",
+    "project_id": "ibringuserapp",
+    "storage_bucket": "ibringuserapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840731699039:android:e23fb795af4c5f5858f8ea",
+        "android_client_info": {
+          "package_name": "com.iBring_user.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840731699039-0ag0l0lfmv424j18asmbbq87dt9rodv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iBring_user.app",
+            "certificate_hash": "0db91038da7d80a97ee51633bc5ada188e46316b"
+          }
+        },
+        {
+          "client_id": "840731699039-u7idgcs4grmdd6rk8bdshl1jnbghn7j0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iBring_user.app",
+            "certificate_hash": "a6e938423526007514a004c7ccf52e04dad0e6b1"
+          }
+        },
+        {
+          "client_id": "840731699039-jp07adsi02vumoko5bup8pp89ee3c719.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1WQ3vY3bYBrZqEHOShbAsNc-5LlfSkXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840731699039-jp07adsi02vumoko5bup8pp89ee3c719.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

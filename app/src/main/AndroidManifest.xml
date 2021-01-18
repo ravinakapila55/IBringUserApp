@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iBring_user.app">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name=".XuberServicesApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/new_app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/new_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup,icon,theme,label">
+
+            <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+            <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api" />
+
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".Activity.BeginScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".tutorial.TutorialScreens"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.SignIn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.Register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.ShowInvoicePicture"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.CustomGooglePlacesSearch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.ActivityHelp"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".Activity.HistoryService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".Activity.EditProfile"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".liveTrack.LiveTrackBooking"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".Activity.AddCard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".Activity.HistoryDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.HistoryActivity"
+            android:label="History"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.ActivityWallet"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".food_service.FoodServiceHistory"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".courier.CourierServiceHome"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".courier.CourierAddSenderDetails"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".courier.CourierAddReceiverDetails"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".courier.AddParcelDetails"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".paypal.PaypalMain"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".paypal.ConfirmationActivity"
+            android:label="Wallet"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.CouponActivity"
+            android:label="Coupon"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Activity.ChangePassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.ForgetPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.ShowProviderProfile"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".Activity.OTPActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".services.HomeSelectServices"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".chat.ChatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".services.MakeOtherServices"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".services.ProviderList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".food_service.FoodServiceHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".food_service.RestaurantMenuItems"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".serviceHistory.ServiceHistory"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".food_service.CartScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".services.ProviderSummary"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".courier.CourierServiceHistory"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".services.SubServiceFurtherList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Firebase Notifications -->
+
+
+
+        <service android:name=".FCM.MyFirebaseMessagingService"/>
+
+        <service
+        android:name=".FCM.MyFirebaseInstanceIDService"
+        android:exported="false">
+
+
+        <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+        </intent-filter>
+
+    </service>
+
+        <activity android:name=".Activity.ProfileActivity" />
+
+        <activity android:name=".Activity.ReviewActivity" />
+
+        <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id" />
+
+        <activity
+        android:name="com.facebook.FacebookActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:label="@string/app_name" />
+
+
+       <activity
+       android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+       android:theme="@style/Base.Theme.AppCompat"/>
+
+     <activity
+     android:name="com.facebook.CustomTabActivity"
+     android:exported="true">
+
+
+    <intent-filter>
+
+    <action android:name="android.intent.action.VIEW" />
+
+    <category android:name="android.intent.category.DEFAULT" />
+
+    <category android:name="android.intent.category.BROWSABLE" />
+
+   <data android:scheme="@string/fb_login_protocol_scheme" />
+
+   </intent-filter>
+
+   </activity>
+
+    </application>
+
+</manifest>

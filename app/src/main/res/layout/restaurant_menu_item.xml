@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorBlue"
+        android:layout_height="?actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="8dp"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/back_icon"
+            android:visibility="visible" />
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="Restaurants"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:text="Lorem Ipsum dolor"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_restraunt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
+            android:layout_marginLeft="3dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="@color/yellow"
+            android:rating="5"/>
+
+
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/light_gray"/>
+
+        <TextView
+            android:id="@+id/tvLAbel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu List"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/light_gray"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccRestraunts"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRestraunt"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingBottom="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.iBring_user.app.Utils.ClanProTextView
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Found"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/dark_gray"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/yellow_background_square">
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Item"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItems"
+            />
+
+           <com.iBring_user.app.Utils.ClanProTextView
+            android:id="@+id/tvView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_cart"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

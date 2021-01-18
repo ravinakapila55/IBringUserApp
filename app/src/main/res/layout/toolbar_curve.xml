@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetStartWithNavigation="0dp"
+    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+    android:elevation="@dimen/_10sdp"
+    app:theme="@style/Toolbar">
+
+    <com.iBring_user.app.Utils.ClanProTextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16ssp"/>
+
+</Toolbar>

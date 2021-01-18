@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlue"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetStartWithNavigation="0dp"
+    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+    android:elevation="@dimen/_10sdp"
+    app:theme="@style/Toolbar">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_arrow_right"
+            android:rotation="180"
+            android:tint="@color/white"
+            />
+
+    <com.iBring_user.app.Utils.ClanProTextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/ivChat"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/stat_notify_chat"
+        android:tint="@color/white"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</Toolbar>
