@@ -180,10 +180,7 @@ public class HomeServiceFragment extends Fragment implements View.OnClickListene
 
             case R.id.card_services:
 
-                Intent intent11=new Intent(getActivity(), HomeSelectServices.class);
-                startActivity(intent11);
-
-//                Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
 
                 break;
 

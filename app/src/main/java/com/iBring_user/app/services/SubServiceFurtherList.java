@@ -53,11 +53,11 @@ public class SubServiceFurtherList extends AppCompatActivity
         FurtherListAdapter adapter=new FurtherListAdapter(this);
         recyclerServices.setAdapter(adapter);
 
-        adapter.onItemSelectedLsistner(new FurtherListAdapter.onCLickListener() {
+        adapter.onItemSelectedLsistner(new FurtherListAdapter.onCLickListener()
+        {
             @Override
             public void onItemCLick(int layoutPostion, View view) {
                 Intent intent=new Intent(SubServiceFurtherList.this,MakeOtherServices.class);
-                startActivity(intent);
             }
         });
     }
