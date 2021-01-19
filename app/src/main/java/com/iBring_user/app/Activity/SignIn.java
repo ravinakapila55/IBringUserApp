@@ -91,7 +91,6 @@ import static com.iBring_user.app.XuberServicesApplication.trimMessage;
 
 public class SignIn extends AppCompatActivity implements RetrofitResponse, PermissionGranted
 {
-
     EditText txtemail,txtpassword;
     TextView lblforgotpassword;
     TextView tvLogin;

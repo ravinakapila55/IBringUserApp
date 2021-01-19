@@ -8,8 +8,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,9 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.iBring_user.app.Activity.Home;
-import com.iBring_user.app.Constants.URLHelper;
 import com.iBring_user.app.Helper.ConnectionHelper;
 import com.iBring_user.app.Helper.SharedHelper;
 import com.iBring_user.app.Models.CabType;
@@ -31,13 +27,9 @@ import com.iBring_user.app.View.TBarView;
 import com.iBring_user.app.courier.CourierServiceHome;
 import com.iBring_user.app.food_service.FoodServiceHome;
 import com.iBring_user.app.retrofit.RetrofitResponse;
-import com.iBring_user.app.retrofit.RetrofitService;
-import com.iBring_user.app.services.HomeSelectServices;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 
@@ -56,7 +48,6 @@ public class HomeServiceFragment extends Fragment implements View.OnClickListene
     ImageView imgMenu;
     HomeServiceFRagmentListener mListener;
     RecyclerView recycler;
-
     TextView toolbar_title;
 
 

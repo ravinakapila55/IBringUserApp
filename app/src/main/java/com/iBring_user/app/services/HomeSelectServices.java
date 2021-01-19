@@ -22,13 +22,10 @@ import com.iBring_user.app.R;
 import com.iBring_user.app.retrofit.RetrofitResponse;
 import com.iBring_user.app.retrofit.RetrofitService;
 import com.iBring_user.app.services.adapter.SelectServicesAdapter;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -53,10 +50,9 @@ public class HomeSelectServices extends AppCompatActivity implements RetrofitRes
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_select_service);
         ButterKnife.bind(this);
-//        toolbar_title.setText("Select Services");
-
+//      mm
         callServiceList();
-//        setAdapter();
+        //        setAdapter();
     }
 
     public void callServiceList()
@@ -65,15 +61,12 @@ public class HomeSelectServices extends AppCompatActivity implements RetrofitRes
                 105, 1,"1").callService(true);
     }
 
-
     public void setAdapter()
     {
         recyclerServices.setLayoutManager(new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,
                 false));
         SelectServicesAdapter selectServicesAdapter=new SelectServicesAdapter(this,othersList);
         recyclerServices.setAdapter(selectServicesAdapter);
-
-
         selectServicesAdapter.onItemSelectedListener(new SelectServicesAdapter.myclickListener() {
             @Override
             public void onitemCLick(int layoutPosition, View view) {

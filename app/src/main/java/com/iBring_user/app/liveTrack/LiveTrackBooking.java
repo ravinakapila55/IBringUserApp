@@ -13,40 +13,28 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentManager;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.iBring_user.app.Constants.URLHelper;
-import com.iBring_user.app.Fragments.ServiceFlowFragment;
-import com.iBring_user.app.Helper.SharedHelper;
 import com.iBring_user.app.R;
 import com.iBring_user.app.Utils.CustomMarker;
 import com.iBring_user.app.Utils.LocationDistanceDuration;
 import com.iBring_user.app.Utils.TrackGoogleLocation;
-import com.iBring_user.app.Utils.Utilities;
-import com.iBring_user.app.chat.ChatActivity;
-
 import org.json.JSONObject;
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
-
 
 public class LiveTrackBooking extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback,
         GoogleMap.OnCameraMoveListener, GoogleMap.OnCameraIdleListener, LocationDistanceDuration {

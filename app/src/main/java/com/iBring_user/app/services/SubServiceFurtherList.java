@@ -34,7 +34,6 @@ public class SubServiceFurtherList extends AppCompatActivity
     @BindView(R.id.recyclerServices)
     RecyclerView recyclerServices;
 
-    MatrixServices  matrixServices;
 
 
 

@@ -22,9 +22,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import butterknife.OnClick;
 
-public class CourierServiceHistory extends AppCompatActivity implements RetrofitResponse {
-
-
+public class CourierServiceHistory extends AppCompatActivity implements RetrofitResponse
+{
     RecyclerView recycler;
     TextView tvNoData;
     ImageView img_back;
@@ -43,7 +42,8 @@ public class CourierServiceHistory extends AppCompatActivity implements Retrofit
         img_back=(ImageView) findViewById(R.id.img_back);
         tvNoData=(TextView) findViewById(R.id.tvNoData);
 
-        img_back.setOnClickListener(new View.OnClickListener() {
+        img_back.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {
