@@ -35,7 +35,6 @@ import butterknife.OnClick;
 
 public class HomeSelectServices extends AppCompatActivity implements RetrofitResponse {
 
-
     @BindView(R.id.cc_services)
     ConstraintLayout cc_services;
 
