@@ -82,6 +82,8 @@ public class RetrofitService
         this.apiCallTYpe=apiCallTYpe;
 
         Log.e("URLLLLL2 ",this.mUrl);
+
+
       /*  dialog=new ProgressDialog(mcontext);
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
@@ -114,10 +116,9 @@ public class RetrofitService
     //For Post Request
     public RetrofitService(Context mcontext, RetrofitResponse mResponse, String mUrl,
                            HashMap<String, RequestBody> postparam,
-                           int mRequestCode, int mValue, String apiCallTYpe) {
-
+                           int mRequestCode, int mValue, String apiCallTYpe)
+    {
         Log.e("inside ","4");
-
         this.mcontext = mcontext;
         this.mResponse = mResponse;
         this.mUrl = mUrl;
@@ -174,7 +175,8 @@ public class RetrofitService
 
     public void callService(boolean ProgressDialog)
     {
-        try {
+        try
+        {
             dialog = new ProgressDialog(mcontext);
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
@@ -322,8 +324,8 @@ public class RetrofitService
                             e.printStackTrace();
                         }
                 }
-
                 }
+
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t)
                 {
@@ -332,17 +334,17 @@ public class RetrofitService
                         dialog.cancel();
                     }
                     t.printStackTrace();
-                    Log.e( "onResponse:MerchantAppp ","Failue" );
+                    Log.e( "onResponse:MerchantAppp ","Failue");
                     alertOnTimeOut(mCall, this, "Connection Time out");
                 }
             });
-
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
     }
+//hr@bridgingtech.com
 
     private void alertOnTimeOut(final Call<ResponseBody> call, final Callback<ResponseBody> callback, String message)
     {

@@ -16,9 +16,6 @@ import com.iBring_user.app.R;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
-
-
-
 public class ShowInvoicePicture extends AppCompatActivity implements View.OnClickListener {
 
     ImageView imgZoomService;

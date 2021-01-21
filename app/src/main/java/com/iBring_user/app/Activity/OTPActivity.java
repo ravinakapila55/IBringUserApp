@@ -59,7 +59,8 @@ public class OTPActivity extends Activity
         btnSendOTP = (Button) findViewById(R.id.btnSendOTP);
         imgBack = (ImageView) findViewById(R.id.imgBack);
 
-        txtOTP.addTextChangedListener(new TextWatcher() {
+        txtOTP.addTextChangedListener(new TextWatcher()
+        {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -76,31 +77,39 @@ public class OTPActivity extends Activity
             }
         });
 
-        btnSendOTP.setOnClickListener(new View.OnClickListener() {
+        btnSendOTP.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                if (txtOTP.getText().toString().equalsIgnoreCase("")) {
+            public void onClick(View v)
+            {
+                if (txtOTP.getText().toString().equalsIgnoreCase(""))
+                {
                     Toast.makeText(context, "Please enter OTP!", Toast.LENGTH_SHORT).show();
                 }
-                else if (!txtOTP.getText().toString().equalsIgnoreCase(SharedHelper.getKey(context, "otp"))) {
+                else if (!txtOTP.getText().toString().equalsIgnoreCase(SharedHelper.getKey(context, "otp")))
+                {
                     Toast.makeText(context, "Your OTP is incorrect!", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else
+                {
                     Intent resetIntent = new Intent(context, ChangePassword.class);
                     startActivity(resetIntent);
                     overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-//                    finish();
+//                  finish();
                 }
             }
         });
 
         lblClickToResend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 forgetPassword();
             }
         });
 
-        imgBack.setOnClickListener(new View.OnClickListener() {
+        imgBack.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 Intent mainIntent = new Intent(OTPActivity.this, ForgetPassword.class);
