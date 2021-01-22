@@ -60,7 +60,8 @@ import static com.iBring_user.app.XuberServicesApplication.trimMessage;
 public class Home extends AppCompatActivity implements NavigationDrawerFragment.NavDrawerFgmtListener,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         NavigationCallBack, HomeServiceFragment.HomeServiceFRagmentListener,
-        HomeCategoryFragment.HomeCategoryFgmtListener, PastTrips.PastTripsListener, RetrofitResponse {
+        HomeCategoryFragment.HomeCategoryFgmtListener, PastTrips.PastTripsListener, RetrofitResponse
+{
     public static String TAG = "Home";
     Context context = Home.this;
     Activity activity = Home.this;
@@ -101,7 +102,6 @@ public class Home extends AppCompatActivity implements NavigationDrawerFragment.
             mNavigationDrawerFragment.setupDrawer(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id
                     .drawer_layout));
 
-
     }
 
 
@@ -131,9 +131,7 @@ public class Home extends AppCompatActivity implements NavigationDrawerFragment.
             Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
             fragment.onActivityResult(requestCode, resultCode, data);
         }
-
     }
-
 
     private void showExitDialog()
     {

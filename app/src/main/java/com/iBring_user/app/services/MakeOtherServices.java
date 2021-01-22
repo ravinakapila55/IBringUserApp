@@ -42,11 +42,11 @@ public class MakeOtherServices extends AppCompatActivity
                 onBackPressed();
                 break;
 
-                case R.id.lnrNext:
-                Log.e("NextClick ","nextClick");
-                    Intent intent=new Intent(MakeOtherServices.this,ProviderList.class);
-                    startActivity(intent);
-                break;
+            case R.id.lnrNext:
+                 Log.e("NextClick ","nextClick");
+                 Intent intent=new Intent(MakeOtherServices.this,ProviderList.class);
+                 startActivity(intent);
+                 break;
 
         }
     }

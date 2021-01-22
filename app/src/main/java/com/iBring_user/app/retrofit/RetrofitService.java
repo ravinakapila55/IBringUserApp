@@ -85,33 +85,33 @@ public class RetrofitService
 
 
       /*  dialog=new ProgressDialog(mcontext);
-        dialog.setCancelable(false);
-        dialog.setCanceledOnTouchOutside(false);
-        dialog.setMessage("Loading...");*/
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setMessage("Loading...");*/
 
-    } //For Post Request
+        } //For Post Request
 
 
 
-    public RetrofitService(Context mcontext, RetrofitResponse mResponse,
-                           String mUrl, HashMap<String,String> map1, int mRequestCode, int mValue,int apiCall)
-    {
-        Log.e("inside ","3");
+        public RetrofitService(Context mcontext, RetrofitResponse mResponse,
+                               String mUrl, HashMap<String,String> map1, int mRequestCode, int mValue,int apiCall)
+        {
+            Log.e("inside ","3");
 
-        this.mcontext = mcontext;
-        this.mResponse = mResponse;
-        this.mUrl = mUrl;
-        this.map1 = map1;
-        this.mRequestCode = mRequestCode;
-        this.mValue = mValue;
-        this.apiCall=apiCall;
+            this.mcontext = mcontext;
+            this.mResponse = mResponse;
+            this.mUrl = mUrl;
+            this.map1 = map1;
+            this.mRequestCode = mRequestCode;
+            this.mValue = mValue;
+            this.apiCall=apiCall;
 
-      /*  dialog=new ProgressDialog(mcontext);
-        dialog.setCancelable(false);
-        dialog.setCanceledOnTouchOutside(false);
-        dialog.setMessage("Loading...");*/
+          /*  dialog=new ProgressDialog(mcontext);
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setMessage("Loading...");*/
 
-    }
+        }
 
     //For Post Request
     public RetrofitService(Context mcontext, RetrofitResponse mResponse, String mUrl,
