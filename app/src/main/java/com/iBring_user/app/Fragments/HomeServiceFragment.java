@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -27,6 +26,7 @@ import com.iBring_user.app.View.TBarView;
 import com.iBring_user.app.courier.CourierServiceHome;
 import com.iBring_user.app.food_service.FoodServiceHome;
 import com.iBring_user.app.retrofit.RetrofitResponse;
+import com.iBring_user.app.services.HomeSelectServices;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -103,8 +103,8 @@ public class HomeServiceFragment extends Fragment implements View.OnClickListene
 
         if (view == null)
         {
-//            view = inflater.inflate(R.layout.fragment_serviceflow, container, false);
-            view = inflater.inflate(R.layout.home_services, container, false);
+//         view = inflater.inflate(R.layout.fragment_serviceflow, container, false);
+           view = inflater.inflate(R.layout.home_services, container, false);
         }
 
         android.widget.Toolbar toolbar = null;
@@ -159,53 +159,40 @@ public class HomeServiceFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View view)
     {
-
         switch (view.getId())
         {
             case R.id.card_taxi:
-
-                ServiceFlowFragment subHomeFragment = ServiceFlowFragment.newInstance();
-                addFragment(subHomeFragment, HomeServiceFragment.TAG, false, true, true);
-
-                break;
+            ServiceFlowFragment subHomeFragment = ServiceFlowFragment.newInstance();
+            addFragment(subHomeFragment, HomeServiceFragment.TAG, false, true, true);
+            break;
 
             case R.id.card_services:
-
-                Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
-
-                break;
+            Intent intent=new Intent(getActivity(), HomeSelectServices.class);
+            startActivity(intent);
+            break;
 
             case R.id.card_courier:
-
-//                Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(getActivity(), CourierServiceHome.class);
-                startActivity(intent);
-
-                break;
+//             Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
+            Intent intent11=new Intent(getActivity(), CourierServiceHome.class);
+            startActivity(intent11);
+            break;
 
             case R.id.card_food:
+            Intent it=new Intent(getActivity(), FoodServiceHome.class);
+            startActivity(it);
+            break;
 
-                Intent it=new Intent(getActivity(), FoodServiceHome.class);
-                startActivity(it);
-//              Toast.makeText(getActivity(), "This feature will be added soon.", Toast.LENGTH_SHORT).show();
-                break;
-
-           case R.id.imgMenu:
-
+            case R.id.imgMenu:
             mListener.handleDrawer();
-
-           break;
+            break;
         }
     }
 
-
-
-
     ArrayList<CabType> cablist=new ArrayList<>();
+
     @Override
     public void onResponse(int RequestCode, String response)
     {
-
         switch (RequestCode)
         {
             case 500:
@@ -239,7 +226,6 @@ public class HomeServiceFragment extends Fragment implements View.OnClickListene
                 }
                 break;
         }
-
     }
 
     public interface HomeServiceFRagmentListener
